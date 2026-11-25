@@ -1,0 +1,25 @@
+# Local camera configuration & secrets (use config/cameras.example.json as template)
+config/cameras.json
+.env
+.env.*
+
+# Runtime media & log directories
+videos/
+logs/
+
+# Python bytecode & test caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+.venv/
+venv/
+
+# Editor & IDE configuration
+.vscode/
+.idea/
+
+# OS metadata
+.DS_Store
+Thumbs.db

@@ -1,0 +1,25 @@
+[Unit]
+Description=rtsp-cloud-sync - Headless IP Camera RTSP/ONVIF Recorder & Cloud Sync
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Replace 'pi' with your Linux username if different
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/rtsp-cloud-sync
+EnvironmentFile=-/home/pi/rtsp-cloud-sync/.env
+ExecStart=/usr/bin/python3 -m src.main
+Restart=always
+RestartSec=10
+KillMode=mixed
+TimeoutStopSec=15
+
+# Sandboxing & Resource Controls
+LimitNOFILE=65536
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

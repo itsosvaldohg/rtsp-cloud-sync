@@ -1,0 +1,81 @@
+{
+  "system": {
+    "local_storage_base": "~/rtsp-cloud-sync/videos",
+    "log_dir": "~/rtsp-cloud-sync/logs",
+    "rclone_remote_base": "gdrive:SecurityVideos",
+    "retention_days": 1,
+    "sync_interval_seconds": 300,
+    "min_free_disk_space_gb": 5.0,
+    "max_storage_size_gb": 15.0
+  },
+  "cameras": [
+    {
+      "name": "front_yard",
+      "display_name": "Front Yard",
+      "model": "Tapo TC41",
+      "location": "exterior",
+      "mac": "AA:BB:CC:DD:EE:01",
+      "ip": "192.168.1.101",
+      "username": "cam_user",
+      "password": "${CAM_PASS}",
+      "rtsp_port": 554,
+      "rtsp_stream": "stream2",
+      "onvif_port": 2020,
+      "recording_mode": "continuous",
+      "segment_time_seconds": 900,
+      "enabled": true
+    },
+    {
+      "name": "back_yard",
+      "display_name": "Back Yard",
+      "model": "Tapo TC41",
+      "location": "exterior",
+      "mac": "AA:BB:CC:DD:EE:02",
+      "ip": "192.168.1.102",
+      "username": "cam_user",
+      "password": "${CAM_PASS}",
+      "rtsp_port": 554,
+      "rtsp_stream": "stream2",
+      "onvif_port": 2020,
+      "recording_mode": "continuous",
+      "segment_time_seconds": 900,
+      "enabled": true
+    },
+    {
+      "name": "entryway",
+      "display_name": "Main Entryway",
+      "model": "Tapo C110",
+      "location": "interior",
+      "mac": "AA:BB:CC:DD:EE:03",
+      "ip": "192.168.1.103",
+      "username": "cam_user",
+      "password": "${CAM_PASS}",
+      "rtsp_port": 554,
+      "rtsp_stream": "stream2",
+      "onvif_port": 2020,
+      "recording_mode": "motion",
+      "segment_time_seconds": 900,
+      "post_motion_record_seconds": 15,
+      "max_event_clip_seconds": 300,
+      "enabled": true
+    },
+    {
+      "name": "hallway",
+      "display_name": "Main Hallway",
+      "model": "Tapo C110",
+      "location": "interior",
+      "mac": "AA:BB:CC:DD:EE:04",
+      "ip": "192.168.1.104",
+      "username": "cam_user",
+      "password": "${CAM_PASS}",
+      "rtsp_port": 554,
+      "rtsp_stream": "stream2",
+      "onvif_port": 2020,
+      "recording_mode": "motion",
+      "segment_time_seconds": 900,
+      "post_motion_record_seconds": 15,
+      "max_event_clip_seconds": 300,
+      "enabled": true
+    }
+  ]
+}

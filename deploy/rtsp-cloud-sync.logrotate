@@ -1,0 +1,12 @@
+# Replace 'pi' with your Linux username if different
+/home/pi/rtsp-cloud-sync/logs/*.log {
+    daily
+    rotate 4
+    size 10M
+    missingok
+    notifempty
+    compress
+    delaycompress
+    copytruncate
+    su pi pi
+}
